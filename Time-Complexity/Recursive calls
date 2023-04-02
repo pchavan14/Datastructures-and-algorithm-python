@@ -1,0 +1,5 @@
+Recursive call to the function once - O(n)
+Recursive call to the function n times in same statement - o (branches ^ depth) 
+
+when the function call the data gets divided into half the time complexity is O(Log n)
+

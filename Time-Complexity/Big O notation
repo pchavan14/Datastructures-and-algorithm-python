@@ -1,0 +1,17 @@
+Time complexity 
+- A way of showing how the runtime of a function increases as the size of input increases
+- We calculate the number of operations
+
+Space complexity
+- The amount of memory some code uses
+
+Big O Notations (worst case scenario)
+Omega (bext case scenario)
+Theta (average case scenario)
+
+Complexity  Name            Sample
+O(1)        Constant        Simple add numbers functions
+O(N)        Linear          Loop through numbers 1 to n
+O(LogN)     Logarithmic     Find any element in sorted array
+O(N^2)      Quadratic       Nested loops
+O(2^N)      Exponential     Double recursion in Fibonacci
