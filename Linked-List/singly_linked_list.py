@@ -100,20 +100,21 @@ class singly_linked_list:
             else:
                 temp = self.head
                 index = 0
-                while index < location - 1:
+                while index < location - 1: #Time complexity - O(n)
                     temp = temp.next
                     index += 1
+                #find the node before the one needs to be deleted
                 nextnode = temp.next
                 temp.next = nextnode.next
                 nextnode.next = None
 
-                
-
-                
-                
-                 
-
-
+    def deleteentireSSL(self):
+        if self.head is None:  #Time complexity - O(1)
+            return "List does not exist"
+        else:
+            self.head = None
+            self.tail = None
+        
 
 
 #create linked list and nodes
@@ -125,6 +126,8 @@ singly_ll.insertSLL(5,-1)
 singly_ll.insertSLL(3,2)
 singly_ll.traverseSSL()
 singly_ll.deletenodeSSL(3)
+singly_ll.traverseSSL()
+singly_ll.deleteentireSSL()
 singly_ll.traverseSSL()
 
 
