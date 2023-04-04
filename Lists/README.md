@@ -1,0 +1,7 @@
+- ordered collection of objects (the sequence of objects insertion is maitained , till we change it)
+- mutable datastructure
+- elements of list can be of different types
+- we can have list of list
+- lists references are stored in contiguous memeory , but the object itself can be stored in different locations
+- lists are a form of dynamic array which increase the memory as needed
+- Arrays are most suitabele for arithmetic operations.
