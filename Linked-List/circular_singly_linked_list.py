@@ -68,9 +68,36 @@ class singly_LL:
             print("The linked list is empty")
         else:
             if location == 0:
-                self.tail.next = self.head.next
-                self.head = self.head.next
-                self.tail = self.tail.next
+                if self.head == self.tail:
+                    self.head = None
+                    self.head = None
+                    self.head.next = None
+                else:
+                    self.head = self.head.next
+                    self.tail.next = self.head
+            elif location == -1:
+                if self.head == self.tail:
+                    self.head = None
+                    self.head = None
+                    self.head.next = None
+                else:
+                    temp = self.head
+                    while temp.next.next is not self.head:
+                        temp = temp.next
+                    temp.next = self.tail.next
+                    self.tail = temp
+            else:
+                temp = self.head
+                index = 0
+                while index < location - 1:
+                    temp = temp.next
+                    index += 1
+                #find the node before the one needs to be deleted
+                nextnode = temp.next
+                temp.next = nextnode.next
+                nextnode.next = None
+
+    
 
                 
 
@@ -83,6 +110,6 @@ singlell.insertCSLL(2,0)
 singlell.insertCSLL(3,-1)
 singlell.insertCSLL(4,2)
 singlell.printCSLL()
-print(singlell.searchCSLL(14))
+print(singlell.searchCSLL(4))
 singlell.deletionCSLL(2)
 singlell.printCSLL()
