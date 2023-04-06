@@ -97,6 +97,11 @@ class singly_LL:
                 temp.next = nextnode.next
                 nextnode.next = None
 
+    def deleteentireSLL(self):
+        self.tail.next = None
+        self.head = None
+        self.tail = None
+
     
 
                 
@@ -112,4 +117,7 @@ singlell.insertCSLL(4,2)
 singlell.printCSLL()
 print(singlell.searchCSLL(4))
 singlell.deletionCSLL(2)
+singlell.printCSLL()
+singlell.deleteentireSLL()
+print("Delete entire CSLL")
 singlell.printCSLL()
