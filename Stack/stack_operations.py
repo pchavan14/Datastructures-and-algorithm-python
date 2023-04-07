@@ -29,6 +29,9 @@ class Stack:
         for i in self.list:
             print(i)
 
+    def deleteStack(self):
+        del self.list
+
 custom_stack = Stack()
 custom_stack.push(3)
 custom_stack.push(4)
@@ -39,6 +42,7 @@ custom_stack.pop()
 custom_stack.traverse()
 print(custom_stack.peek())
 custom_stack.traverse()
+custom_stack.deleteStack()
 
     
 
