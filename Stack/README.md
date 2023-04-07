@@ -1,0 +1,1 @@
+- Stack is a LIFO method (last in first out)
