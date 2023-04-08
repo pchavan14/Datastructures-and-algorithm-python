@@ -1,1 +1,3 @@
 - Stack is a LIFO method (last in first out)
+- Stack is created using list
+- Not used for random access of data
