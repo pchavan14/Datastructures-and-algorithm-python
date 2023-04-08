@@ -1,0 +1,1 @@
+- Queue is first in and first out
