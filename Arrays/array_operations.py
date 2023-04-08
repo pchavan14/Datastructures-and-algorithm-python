@@ -40,8 +40,13 @@ print(findingElement(arr1,5))
 #Time complexity - O(n) - worst case
 
 #delete an element from array
+#remove element only removes one occurence of element in case of duplicates
 arr1.remove(10)
 print(arr1)
+#Time complexity - O(n) - Worst case
+#Space complexity - O(1)
+
+
 
 
 

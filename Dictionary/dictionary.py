@@ -43,7 +43,13 @@ my_dict.clear()
 
 my_dict = {"name":"Edy","age":29,"gender":"Female"}
 
+#delete any key or entire dictionary
 del my_dict["gender"]
+
+#Time complexity for deleting is O(1)
+#amortized O(n) when huge elements are there
+
+
 
 
 

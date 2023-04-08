@@ -26,9 +26,10 @@ my_dict.setdefault("salary",150000)
 my_dict.values()
 
 #update () - anaother dictionary values updates the current dictionary
-my_dict.update({"name":"Teddy","status":"single"})
+my_dict.update({"name":"Teddy","status":"single"}) # useful for bulk update
 
-print(my_dict)
+
+
 
 
 

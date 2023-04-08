@@ -49,7 +49,7 @@ del my_list[0]
 
 #remove - delete the value , we just provide the value
 my_list.remove(25)
-print(my_list)
+
 
 
 

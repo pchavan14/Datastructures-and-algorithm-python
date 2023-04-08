@@ -7,6 +7,7 @@ def max_product(myarray):
             product = max(product,(myarray[i]*myarray[j]))
     return product
 
+#time complexity - O(n^2)
 
 
 

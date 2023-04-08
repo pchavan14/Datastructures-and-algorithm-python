@@ -30,6 +30,11 @@ for i in range(0,len(twoDArray)):
 #deletin two D array
 deletedtwoDArray = np.delete(twoDArray,1,0)
 print(deletedtwoDArray)
+#O(mn)
+#Space complexity - O(1)
+
+
+
 
 
 

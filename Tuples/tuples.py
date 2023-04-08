@@ -14,6 +14,6 @@ new_tuple[1]
 
 #list to tuple
 a = tuple([1,2,3,4])
-print(a)
+
 
 

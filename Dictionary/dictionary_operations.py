@@ -10,7 +10,8 @@ my_dict = dictionary_methods.my_dict
 len(my_dict) #counting number of pairs
 
 #sorted function
-print(sorted(my_dict))
+sorted(my_dict) # return list of sorted keys
+
 
 
 

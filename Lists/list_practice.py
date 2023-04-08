@@ -48,8 +48,8 @@ my_list = [1,2,3,4,5]
 # my_arr / 2 #supported
 # my_list / 2 #not supported
 
-my_arr_2 = np.append(my_arr,'a')
-print(my_arr_2)
+my_arr_2 = np.append(my_arr,'a') # all integres gets converted to string
+
 
 
 

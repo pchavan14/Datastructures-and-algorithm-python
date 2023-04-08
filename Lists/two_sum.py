@@ -29,5 +29,5 @@ for i in range(len(nums)):
             continue
         elif nums[i] + nums[j] == target:
             print(i,j)
-
+#time complexity  - O(n2)
     
