@@ -28,12 +28,12 @@ class Solution:
             #inserted the end time of the meeting started the earliest
             heapq.heappush(free_rooms,intervals[0][1])
 
-            for i in intervals[1:]:
+            for i in intervals[1:]: #O(n)
                 #the meeting has greter start time then the meeting with shortest end time , so it can use a free room
                 if free_rooms[0] <= i[0]:
-                    heapq.heappop(free_rooms)
+                    heapq.heappop(free_rooms) #O(LogN)
                 #if not a new meeting room is allocated to it
-                heapq.heappush(free_rooms,i[1])
+                heapq.heappush(free_rooms,i[1]) #O(LogN)
 
             return len(free_rooms)
                 
@@ -43,6 +43,12 @@ intervals = [[1, 10], [2, 7], [3, 19], [8, 12], [10, 20], [11, 30]]
 sol = Solution()
 min_meeting_rooms = sol.minMeetingRooms(intervals)
 print(min_meeting_rooms)
+
+#Time complexity - O(NLogN)
+
+
+
+
 
 
 
