@@ -18,19 +18,35 @@ class Solution(object):
         
         #works in python3 but not in python
         def bst(root):
-            nonlocal total_sum # The nonlocal keyword is used in nested functions to reference a variable in the parent function. 
+            #nonlocal total_sum # The nonlocal keyword is used in nested functions to reference a variable in the parent function. 
+            #alternative to nonlocal variable is creating a dictioanry and accessing it
             if not root:
                 return
             if root.val >= low and root.val <= high:       
-                total_sum += root.val
+                d['total_sum'] += root.val
             bst(root.left)
             bst(root.right)
-            return total_sum
+           
 
-
-        total_sum = 0
+        d = {'total_sum' : 0}
         bst(root)
-        return (total_sum)
+        return(d['total_sum'])
+    
+    #iterative approach
+    def rangeSumBST_iterative(self,root,low,high):
+        ans = 0
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            if node:
+                if low <= node.val <= high:
+                    ans += node.val
+                if low < node.val:
+                    stack.append(node.left)
+                if node.val < high:
+                    stack.append(node.right)
+        
+        return ans
     
 
 
@@ -53,3 +69,7 @@ sol = Solution()
 total_sum = sol.rangeSumBST(newTree,7,15)
 
 print(total_sum)
+
+iterative_sum = sol.rangeSumBST_iterative(newTree,7,15)
+
+print(iterative_sum)
