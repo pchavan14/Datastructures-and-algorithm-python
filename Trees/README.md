@@ -1,0 +1,4 @@
+- Acyclic data structure with heirarchical relationship between elements
+- each node has data and reference to next nodes
+- Tree data structure is non linear DS and gives quicker access to data
+- 

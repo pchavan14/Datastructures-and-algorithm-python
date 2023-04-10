@@ -32,7 +32,7 @@ class Solution(object):
         bst(root)
         return(d['total_sum'])
     
-    #iterative approach
+    #iterative approach by creating  a stack
     def rangeSumBST_iterative(self,root,low,high):
         ans = 0
         stack = [root]

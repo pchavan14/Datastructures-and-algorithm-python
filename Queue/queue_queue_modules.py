@@ -22,3 +22,6 @@ custom_queue.appendleft(3)
 for i in custom_queue:
     print(i)
 
+
+
+

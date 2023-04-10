@@ -1,1 +1,5 @@
 - Queue is first in and first out
+- circular queue is when we have set the limit of elements in a queue and when that is reached we start removing elements from the beginning
+- Queue can be implemented with collections and queue module
+- Queue module implements multi-producer and multi-consumer queues , it is specially useful in implementing multi threaded applications
+- Types of queues in Queue module FIFO , LIFO and priority queues (entries are kept sorted using heapq module and lowest valued entry is retrieved first)
