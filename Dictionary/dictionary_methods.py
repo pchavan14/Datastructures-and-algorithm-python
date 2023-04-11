@@ -28,6 +28,9 @@ my_dict.values()
 #update () - anaother dictionary values updates the current dictionary
 my_dict.update({"name":"Teddy","status":"single"}) # useful for bulk update
 
+from collections import defaultdict
+my_dict = defaultdict(list)
+
 
 
 
