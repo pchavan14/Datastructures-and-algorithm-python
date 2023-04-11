@@ -12,7 +12,7 @@ class Solution(object):
         """
        
 
-        def subtree_traversal(subroot): ##Time complexity - O(n)
+        def subtree_traversal(subroot): ##Time complexity - O(n) , space complexity as well
             nonlocal subtree_sums
             if not subroot:
                 return 0
@@ -24,13 +24,13 @@ class Solution(object):
 
         subtree_sums = []   
         total_sum = subtree_traversal(root)
-        print(total_sum)
-        print(subtree_sums)
+        # print(total_sum)
+        # print(subtree_sums)
         
         maxProduct = 0
         for s in subtree_sums:
             maxProduct = max(maxProduct, s * (total_sum - s))
-        return maxProduct
+        return maxProduct % (10 ** 9 + 7) ## ** is raised to , to the power of 9
 
 
 
