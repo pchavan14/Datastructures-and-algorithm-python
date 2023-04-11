@@ -16,16 +16,15 @@ class Solution(object):
             nonlocal subtree_sums
             if not subroot:
                 return 0
-            left_sum = subtree_traversal(subroot.left)
-            right_sum = subtree_traversal(subroot.right)
-            total_sum = subroot.val + left_sum + right_sum
+            total_sum = subroot.val + subtree_traversal(subroot.left) + subtree_traversal(subroot.right)
+            print(total_sum)
             subtree_sums.append(total_sum)
             return total_sum
 
         subtree_sums = []   
         total_sum = subtree_traversal(root)
-        # print(total_sum)
-        # print(subtree_sums)
+        print(total_sum)
+        print(subtree_sums)
         
         maxProduct = 0
         for s in subtree_sums:
