@@ -58,6 +58,40 @@ def searchNode(newTree,val):
                 root = root.right
         return "Element not found"
     
+def minimum_value_node(newTree):
+    #mimumum value of the BST tree is the left most node
+    current = newTree
+    while current.left:
+        current = current.left
+    return current
+
+def deletenode(newTree,nodeValue):
+    if not newTree:
+        return
+    if nodeValue < newTree.data:
+        deletenode(newTree.left,nodeValue)
+    elif nodeValue > newTree.data:
+        deletenode(newTree.right,nodeValue)
+    else:
+        #delete node which has one child
+        if newTree.left is None:
+            newTree.data = newTree.right.data
+            newTree.right = None
+            return
+        if newTree.right is None:
+            newTree.data = newTree.left.data
+            newTree.left = None
+            return
+        
+        temp = minimum_value_node(newTree.right)
+        newTree.data = temp.data
+        temp = None
+        return
+        
+
+
+    
+
 
 
 
@@ -67,12 +101,15 @@ def searchNode(newTree,val):
 newTree = TreeNode(70)
 insertNode(newTree,50)
 insertNode(newTree,30)
+insertNode(newTree,40)
 insertNode(newTree,90)
 insertNode(newTree,60)
 insertNode(newTree,80)
 insertNode(newTree,100)
 levelorder_traversal(newTree)
 print(searchNode(newTree,60))
+deletenode(newTree,70)
+levelorder_traversal(newTree)
 
 
 
