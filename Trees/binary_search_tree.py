@@ -87,29 +87,33 @@ def deletenode(newTree,nodeValue):
         newTree.data = temp.data
         temp = None
         return
+
+def deleteentireBST(newTree):
+    newTree.data = None
+    newTree.right = None
+    newTree.left = None
+    print ("The entire tree is deleted")
+
+##Time complexities
+#Insert , search and delete is O(logN)
+#Traverse is O(n)
         
 
 
-    
 
 
-
-
-
-
-
-newTree = TreeNode(70)
-insertNode(newTree,50)
+newTree = TreeNode(10)
+insertNode(newTree,20)
 insertNode(newTree,30)
 insertNode(newTree,40)
-insertNode(newTree,90)
+insertNode(newTree,50)
 insertNode(newTree,60)
+insertNode(newTree,70)
 insertNode(newTree,80)
-insertNode(newTree,100)
 levelorder_traversal(newTree)
-print(searchNode(newTree,60))
-deletenode(newTree,70)
-levelorder_traversal(newTree)
+# print(searchNode(newTree,60))
+# deletenode(newTree,70)
+# levelorder_traversal(newTree)
 
 
 
