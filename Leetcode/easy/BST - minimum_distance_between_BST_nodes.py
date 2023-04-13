@@ -27,13 +27,7 @@ class Solution(object):
 
         print(min_diff)
         
-        #infinite value
         
-       
-
-        # for i in range(1,len(sorted_array)):
-        #     min_diff = min(min_diff,sorted_array[i] - sorted_array[i-1])
-        # return(min_diff)
 
 
 

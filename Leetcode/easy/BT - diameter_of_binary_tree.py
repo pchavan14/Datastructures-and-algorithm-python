@@ -20,7 +20,7 @@ class Solution(object):
             diameter = max(diameter,left_path + right_path)
             print(left_path , right_path , diameter)
 
-            
+             
             return max(left_path,right_path) + 1
         
         (bst(root))
