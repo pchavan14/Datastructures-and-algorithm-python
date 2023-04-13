@@ -3,7 +3,7 @@
 
 
 def binary_search_rec(nums,value):
-    if len(nums) < 1:
+    if len(nums) == 0:
         return "The number is not found"
     m = len(nums) // 2
     if nums[m] == value:
@@ -17,10 +17,10 @@ def binary_search_rec(nums,value):
 def binary_search_iter(nums,value):
     l = 0
     r = len(nums) - 1
-    m = len(nums) // 2
+   
 
     while (l <= r):
-        m = (l+r) // 2
+        m = l + (r-l) // 2
         if nums[m] == value:
             return "The number is found"
         elif value < nums[m]:
@@ -40,5 +40,5 @@ def binary_search_iter(nums,value):
 
 
 nums = [1,2,3,4,5,6,7,8]
-print(binary_search_rec(nums,10))
+print(binary_search_rec(nums,4))
 print(binary_search_iter(nums,10))
