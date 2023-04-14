@@ -15,7 +15,7 @@ class Graph:
         #vertices must be present in a graph before adding an edge between them
         if vertex1 in self.adjacency_list and vertex2 in self.adjacency_list:
             self.adjacency_list[vertex1].append(vertex2)
-            self.adjacency_list[vertex2].append(vertex1)
+            #self.adjacency_list[vertex2].append(vertex1)
             return True
         return False
     
@@ -36,21 +36,14 @@ class Graph:
 
 
 custom_graph = Graph()
-custom_graph.add_vertex('A')
-custom_graph.add_vertex('B')
-custom_graph.add_vertex('C')
-custom_graph.add_vertex('D')
-custom_graph.add_vertex('E')
-custom_graph.add_vertex('F')
-custom_graph.add_vertex('G')
-custom_graph.add_edge('A','B')
-custom_graph.add_edge('A','C')
-custom_graph.add_edge('B','D')
-custom_graph.add_edge('B','G')
-custom_graph.add_edge('C','D')
-custom_graph.add_edge('C','E')
-custom_graph.add_edge('D','F')
-custom_graph.add_edge('E','F')
-custom_graph.add_edge('F','G')
+custom_graph.add_vertex('2')
+custom_graph.add_vertex('1')
+custom_graph.add_vertex('0')
+custom_graph.add_vertex('3')
+custom_graph.add_vertex('4')
+custom_graph.add_edge('2','1')
+custom_graph.add_edge('1','0')
+custom_graph.add_edge('4','0')
+custom_graph.add_edge('3','4')
 custom_graph.print_graph()
-custom_graph.DFS('A')
+custom_graph.DFS('2')

@@ -9,19 +9,51 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-
+        #add the two numbers
         carry = 0
+        dummy_head = ListNode(0)
+        curr = dummy_head
+        # 2 - > 4 - > 3
+        # 5 - > 6 - > 4
+        #7 - > 0 - > 8
+        while l1 is not None or l2 is not None or carry !=0 :
+            #digits which are overflowed
+            if l1 is not None:
+                val1 = l1.val
+            else:
+                val1 = 0
 
-        while l1 is not None or l2 is not None:
-            val1 = l1.val
-            val2 = l2.val
+            #digits which are overflowed
+            if l2 is not None:
+                val2 = l2.val
+            else:
+                val2 = 0
 
-            sum = ((val1 + val2) % 10 + carry)
+            sum = val1 + val2 + carry
+
             carry = (val1 + val2) // 10
-            newnode = ListNode(sum)
 
-            l1 = l1.next
-            l2 = l2.next
+            node = ListNode((val1 + val2)%10)
+
+            curr.next = node
+            curr = node
+
+            #digits which are overflowed
+            if l1:
+                l1 = l1.next
+            else:
+                l1 = None
+
+            if l2:
+                l2 = l2.next
+            else:
+                l2 = None
+
+    
+        return dummy_head.next
+
+
+        
         
     
             
