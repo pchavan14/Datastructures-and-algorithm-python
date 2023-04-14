@@ -16,3 +16,9 @@ Hashing is the method of sorting and indexing data. The idea behind hashing is t
 
 - It distributes hash values uniformly across hash tables (avoid collisions)
 - It has to use all input data
+
+### **Sorting algorithms**
+
+- bubble , selection and insertion sort  O(n^2)
+- Bucket , merge , quick and heap sort O(n logn)
+- bubble , insertion , bucket and merge sort are stable which preserve the order of the elements

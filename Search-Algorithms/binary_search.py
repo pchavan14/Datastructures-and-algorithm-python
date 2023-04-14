@@ -20,7 +20,7 @@ def binary_search_iter(nums,value):
    
 
     while (l <= r):
-        m = l + (r-l) // 2
+        m = l + (r-l) // 2 #To avoid integer overflow does not matter in python but may matter in C where int limit is 2^32 - 1
         if nums[m] == value:
             return "The number is found"
         elif value < nums[m]:

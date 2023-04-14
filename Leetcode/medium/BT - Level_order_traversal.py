@@ -22,6 +22,7 @@ class Solution(object):
                 for _ in range(len(custom_queue)):
                     root = custom_queue.pop(0)
                     level.append(root.val)
+                    
                     if root.left is not None:
                         custom_queue.append(root.left)
                         
