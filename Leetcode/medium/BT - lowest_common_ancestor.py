@@ -24,10 +24,10 @@ class Solution(object):
         right_res = self.lowestCommonAncestor(root.right, p, q)
 
         
-        #if (left_res and right_res):
-        return root.val
-        # else:
-        #     return left_res or right_res
+        if (left_res and right_res):
+            return root.val
+        else:
+            return left_res or right_res
        
         
 

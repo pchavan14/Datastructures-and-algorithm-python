@@ -17,7 +17,7 @@ class Solution(object):
                 break
     
 
-        return(''.join(sorted_num))
+        return int(''.join(sorted_num))
 
 
 
