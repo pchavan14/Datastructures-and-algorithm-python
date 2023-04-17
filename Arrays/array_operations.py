@@ -46,6 +46,21 @@ print(arr1)
 #Time complexity - O(n) - Worst case
 #Space complexity - O(1)
 
+def palindromic_string(sample_str):
+    i = 0
+    j = len(sample_str) - 1
+
+    while (i < j):
+        if sample_str[i] == sample_str[j]:
+            i += 1
+            j -= 1
+            continue
+        else:
+            return False       
+    return True
+
+print(palindromic_string('abab'))
+
 
 
 
