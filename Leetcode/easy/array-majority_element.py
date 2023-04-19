@@ -15,7 +15,8 @@ class Solution(object):
             else:
                 count_dict[i] += 1
 
-        print(max(count_dict, key=count_dict.get))
+        #The below statement returns the maximum number in the dictionary
+        return(max(count_dict, key=count_dict.get))
 
 
 nums = [3]

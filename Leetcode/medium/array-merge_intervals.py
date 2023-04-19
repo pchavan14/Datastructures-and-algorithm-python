@@ -22,8 +22,7 @@ class Solution(object):
                 result.append(intervals[i])
             elif result[-1][1] >= intervals[i][0] and result[-1][1] < intervals[i][1]:
                 result[-1][1] = intervals[i][1]
-            else:
-                continue
+
 
         print (result)
             
