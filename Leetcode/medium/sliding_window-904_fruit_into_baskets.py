@@ -5,27 +5,18 @@ class Solution(object):
         :type fruits: List[int]
         :rtype: int
         """
-        max_length = 0
-        sample_list = {}
+        res = 0
         for i in range(len(fruits)):
-            sample_list[fruits[i]] = 1
-            for j in range(i,len(fruits)):
-                if fruits[j] != fruits[i]:
-                    if sum(sample_list.keys()) <= 2:
-                        sample_list[fruits[j]] = 1
-                    else:
-                        max_length = max(sum(sample_list.keys()),max_length)
-                        sample_list = {}
-                        break
-                else:
-                    sample_list[fruits[i]] += 1
-                    print(sample_list)
+            for j in range(1,len(fruits)):
+                count = []
+                for k in range(i,j+1):
+                    if fruits[k] not in count:
+                        count.append(fruits[k])
+                if len(count) <= 2:
+                    res = max(res,j+1-i)
 
-        print(max_length)
-                    
 
         
-
         
 
 
