@@ -12,7 +12,7 @@ class Solution(object):
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j] == '1' and (i,j) not in visited:
-                    visited.add((i,j))
+                    #visited.add((i,j))
                     number_of_islands += 1      
                     self.recursive_dfs(grid,i,j,visited)       
        
@@ -32,7 +32,7 @@ class Solution(object):
                     visited.add((xi,yj))
 
     def recursive_dfs(self,grid,i,j,visited):
-        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == '0':
+        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == '0' or (i,j) in visited:
             return
         visited.add((i,j))
         self.recursive_dfs(grid,i+1,j,visited)
