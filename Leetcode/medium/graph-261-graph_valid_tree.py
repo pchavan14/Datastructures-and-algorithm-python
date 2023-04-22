@@ -34,7 +34,7 @@ class Solution(object):
                 parent[edges] = popVertex
                 stack.append(edges)
 
-        print(stack)
+        
 
                 
                 

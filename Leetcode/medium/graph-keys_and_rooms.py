@@ -6,19 +6,13 @@ class Solution(object):
         :rtype: bool
         """
 
-        #flat list
-        flat_list = []
-        for sublist in rooms:
-            for item in sublist:
-                flat_list.append(item)
-
-        print(flat_list)
+       
         
         graph = defaultdict(list)
         for i in range(len(rooms)):
             graph[i] = rooms[i]
 
-        print(graph)
+        
         custom_stack = []
         custom_stack.append(0)
         visited = []
@@ -34,9 +28,7 @@ class Solution(object):
                     custom_stack.append(rooms)
         
         
-        if flat_list == visited:
-            return True
-        return False
+        return len(visited) == len(rooms)
 
 
 
