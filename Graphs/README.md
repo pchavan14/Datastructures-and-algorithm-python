@@ -19,3 +19,9 @@
 - DFS uses stack
 - BFS are used to search when we know target is near to vertex
 - DFS are used to search when we know target is far from the vertex
+
+
+## **Single source shortest path**
+- BFS can be used for SSSP algorithm only with unweighted, undirected graphs and unweighted , directed graphs
+- DFS does not work for SSSP
+
