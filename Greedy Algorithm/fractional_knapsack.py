@@ -12,13 +12,11 @@ def knapsack(items,capacity):
     totalValue = 0
 
     for i in items:
-        print(i.weight , i.value , i.ratio)
         if usedCapacity + i.weight <= capacity:
             usedCapacity += i.weight
             totalValue += i.value
         else:
             unusedWeight = capacity - usedCapacity
-            print(unusedWeight)
             value = i.ratio * unusedWeight
             usedCapacity += unusedWeight
             totalValue += value
