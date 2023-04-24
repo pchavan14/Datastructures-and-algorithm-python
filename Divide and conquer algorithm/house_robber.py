@@ -23,7 +23,7 @@ class Solution(object):
             return max(stealFirst,skipFirst)
 
         index_list = {}
-        print(house_robber(nums,0))
+        house_robber(nums,0)
         
 
 
