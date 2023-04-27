@@ -1,7 +1,7 @@
 def fib_memo(memo,n):
-    if n == 1:
+    if n == 0:
         return 0
-    if n == 2:
+    if n in (1,2):
         return 1
     if n not in memo:
         memo[n] = fib_memo(memo,n-1) + fib_memo(memo,n-2)
@@ -15,5 +15,5 @@ def fib_memo(memo,n):
 
 
 myDict = {}
-n = 6
+n = 5
 print(fib_memo(myDict,n))
