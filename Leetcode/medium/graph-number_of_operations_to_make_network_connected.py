@@ -12,7 +12,7 @@ class Solution(object):
             return (-1)
 
         adjacency_list = defaultdict(list)
-        visited = []
+        visited = set()
         number_of_islands = 0
         
         for i in connections:
@@ -31,7 +31,7 @@ class Solution(object):
 
 
     def bfs(self,adjacency_list,node,visited):
-        visited.append(node)
+        visited.add(node)
         custom_queue = []
         custom_queue.append(node)
 
@@ -40,7 +40,7 @@ class Solution(object):
             deVertex = custom_queue.pop(0)
             for edge in adjacency_list[deVertex]:
                 if edge not in visited:
-                    visited.append(edge)
+                    visited.add(edge)
                     custom_queue.append(edge)
         
 
