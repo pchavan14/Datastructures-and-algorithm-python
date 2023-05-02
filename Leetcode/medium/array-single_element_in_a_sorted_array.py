@@ -16,7 +16,7 @@ class Solution(object):
             else:
                 right = mid
 
-        print(nums[right])
+        return nums[right]
 
 
 
