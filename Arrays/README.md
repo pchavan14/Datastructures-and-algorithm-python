@@ -5,5 +5,5 @@
 - random access - O(1) by knowing locations of array
 
 ## When not to use
-- same data types
+- different  data types
 - reserve a memory (not dynamic array)
